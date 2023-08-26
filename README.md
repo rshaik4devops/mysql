@@ -6,21 +6,18 @@ MySQL is the database service which is needed for the application. So we need to
 
 As per the Application need, we are choosing MySQL 5.7 version.
 
-1. Setup MySQL Repo
+1. Setup MySQL Repo . Ensure that you are root user to run the below commands
 
 ```
-# echo '[mysql57-community]
-name=MySQL 5.7 Community Server
-baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/7/$basearch/
-enabled=1
-gpgcheck=0' > /etc/yum.repos.d/mysql.repo
+rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 
 ```
 
 2. Install MySQL  
 
 ```
-# yum remove mariadb-libs -y 
+
 # yum install mysql-community-server -y 
 
 ```
