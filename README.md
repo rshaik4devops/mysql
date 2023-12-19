@@ -39,7 +39,7 @@ rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 
 5. Next, We need to change the default root password in order to start using the database service.
 
-
+Please set the password to RoboShop@1
 ```
 # mysql_secure_installation
 
@@ -56,7 +56,7 @@ rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 
 ```
 > uninstall plugin validate_password;
-> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+
 ```
 
 
@@ -83,7 +83,8 @@ Load the schema for Services.
 # cd /tmp
 # unzip mysql.zip
 # cd mysql-main
-# mysql -u root -ppassword <shipping.sql
+# mysql -u root -pRoboShop@1 <shipping.sql
+ 
 ```
 
 
